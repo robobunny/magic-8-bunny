@@ -1,0 +1,21 @@
+.options-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 750;
+    background-color: $dkgreen0;
+    padding: 1rem;
+}
+
+.options-list {
+    background-color: $dkgreen0;
+    border: .75rem solid $dkgreen0;
+}
+
+.option-item {
+    display: flex;
+    justify-content: space-between;
+    max-width: 95%;
+    margin: 1.2rem auto;
+    padding: 1rem;
+    background-color: $dkgreen1;
+}

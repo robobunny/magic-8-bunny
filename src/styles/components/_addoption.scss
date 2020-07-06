@@ -1,0 +1,25 @@
+form {
+    display: flex;
+    background-color: $dkgreen0;
+    padding: $s-size $m-size;
+}
+
+form input {
+    flex-grow: 1;
+    margin: 0 $s-size 0 0;
+    background-color: $dkgreen2;
+    color: $green;
+    border: .5rem solid $dkgreen1;
+    font-size: $l-size;
+    padding: .6rem .2rem;
+}
+
+@media (max-width:600px) {
+    form {
+        flex-direction: column;
+    }
+
+    form input{
+        margin: 0 0 $s-size 0;
+    }
+}

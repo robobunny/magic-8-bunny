@@ -1,0 +1,54 @@
+button {
+    cursor: pointer;
+    color: $green;
+    background-color: inherit;
+    border: .25rem solid;
+    border-color: $green;
+    border-radius: .5rem;
+    padding: .75rem;
+}
+
+button:hover {
+    background-color: rgba($color: #ffffff, $alpha: 0.1)
+}
+
+button:disabled {
+    cursor: default;
+    opacity: 20%;
+}
+
+button.primary{
+    border: none;
+    color: white;
+    background-color: $green;
+    border-bottom: .6rem solid $green1;
+}
+
+button.primary:hover{
+    background-color: $green1;
+}
+
+.big-button {
+    font-weight: 800;
+    font-size: 2.5rem;
+    width: 95%;
+    height: 6rem;
+    margin: 1rem 2.5%;
+}
+
+.secret-button {
+    border: none;
+    color: $dkgreen3;
+    background-color: $dkgreen2;
+    margin: 1rem 2.5%;
+}
+
+.secret-button:hover {
+    cursor: default;
+    background-color: $dkgreen2;
+}
+
+
+.remove-button {
+    border: none;
+}

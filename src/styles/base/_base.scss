@@ -1,0 +1,34 @@
+* {
+    transition: 150ms;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: $dkgreen1;
+    color: $green;
+    font-family: 'Fira Sans OT', 'Arial', sans-serif;
+    font-size: $s-size;
+}
+
+.container {
+    max-width: 740px;
+    background-color: $dkgreen0;
+    margin: 0 auto $xl-size;
+    padding: 0;
+}
+
+.italics {
+    font-style: italic;
+    text-align: center;
+}
+
+.error {
+    color: $error;
+    font-style: italic;
+    text-align: center;
+    background-color: $dkgreen0;
+    margin: $m-size;
+}
