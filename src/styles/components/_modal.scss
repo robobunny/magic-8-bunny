@@ -18,7 +18,10 @@
 }
 
 .modal {
-    background-color: $dkgreen0;
-    padding: $l-size $xl-size $xl-size;
-    max-width: 90%;
+    background-color: $dkgreen-900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.8rem 2.0rem 2.0rem;
+    max-width: 75%;
 }

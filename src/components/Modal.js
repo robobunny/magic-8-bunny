@@ -10,11 +10,12 @@ const OptionModal = (props) => {
             closeTimeoutMS={250}
             className="modal"
         >
+            <img type="image/png" src="bunny-fill-128-sq.png" alt="Robobunny"></img>    
             <h3>_robobunny has spoken:</h3>
-            <p>You should {props.selectedOption}!</p>
+            <p>{props.selectedOption}!</p>
             <button
                 onClick={props.closeModal}
-            >Ok I'll do it!</button>
+            >I accept your wisdom!</button>
         </Modal>
     );
 };

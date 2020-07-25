@@ -1,16 +1,19 @@
+.form {
+    padding: 1rem;
+}
+
 form {
     display: flex;
-    background-color: $dkgreen0;
-    padding: $s-size $m-size;
+    padding: $font-sm $font-lg;
 }
 
 form input {
     flex-grow: 1;
-    margin: 0 $s-size 0 0;
-    background-color: $dkgreen2;
-    color: $green;
-    border: .5rem solid $dkgreen1;
-    font-size: $l-size;
+    margin: 0 $font-sm 0 0;
+    background-color: $dkgreen-600;
+    color: $bunny-500;
+    border: .5rem solid $dkgreen-700;
+    font-size: $font-lg;
     padding: .6rem .2rem;
 }
 
@@ -20,6 +23,6 @@ form input {
     }
 
     form input{
-        margin: 0 0 $s-size 0;
+        margin: 0 0 $font-sm 0;
     }
 }

@@ -23,11 +23,12 @@ export default class AddOption extends React.Component {
     render() {
         return (
             <div className="form">
+                <h3>Add a response:</h3>
                 <form onSubmit={this.formSubmit}>
                     <input 
                         type="text"
                         name="option"
-                        placeholder="Type an action here..."
+                        placeholder="Add a wise response..."
                         autoFocus={true}
                     />
                     <button>Add Option</button>

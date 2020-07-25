@@ -12,7 +12,7 @@ const Options = (props) => {
                 {
                     props.options.length === 0 
                     && <p className="italics">
-                        Add a possible course of action to get started!
+                        Add a possible response to get started!
                     </p>
                 }
                 {
@@ -31,7 +31,7 @@ const Options = (props) => {
                     hidden={props.popBtnClicked} 
                     onClick={props.populateList}
                 >
-                    Unlock secret options
+                    Add default responses
             </button>
         </div>
     );

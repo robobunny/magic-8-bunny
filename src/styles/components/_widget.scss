@@ -2,13 +2,13 @@
     display: flex;
     justify-content: space-between;
     font-weight: 750;
-    background-color: $dkgreen0;
+    background-color: $dkgreen-900;
     padding: 1rem;
 }
 
 .options-list {
-    background-color: $dkgreen0;
-    border: .75rem solid $dkgreen0;
+    background-color: $dkgreen-900;
+    border: .75rem solid $dkgreen-900;
 }
 
 .option-item {
@@ -17,5 +17,5 @@
     max-width: 95%;
     margin: 1.2rem auto;
     padding: 1rem;
-    background-color: $dkgreen1;
+    background-color: $dkgreen-800;
 }

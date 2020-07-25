@@ -1,9 +1,9 @@
 button {
     cursor: pointer;
-    color: $green;
+    color: $bunny-500;
     background-color: inherit;
     border: .25rem solid;
-    border-color: $green;
+    border-color: $bunny-500;
     border-radius: .5rem;
     padding: .75rem;
 }
@@ -20,16 +20,16 @@ button:disabled {
 button.primary{
     border: none;
     color: white;
-    background-color: $green;
-    border-bottom: .6rem solid $green1;
+    background-color: $bunny-500;
+    border-bottom: .6rem solid $bunny-600;
 }
 
 button.primary:hover{
-    background-color: $green1;
+    background-color: $bunny-600;
 }
 
 .big-button {
-    font-weight: 800;
+    font-weight: $font-bold;
     font-size: 2.5rem;
     width: 95%;
     height: 6rem;
@@ -38,14 +38,14 @@ button.primary:hover{
 
 .secret-button {
     border: none;
-    color: $dkgreen3;
-    background-color: $dkgreen2;
+    color: $dkgreen-600;
+    background-color: $dkgreen-700;
     margin: 1rem 2.5%;
 }
 
 .secret-button:hover {
     cursor: default;
-    background-color: $dkgreen2;
+    background-color: $dkgreen-800;
 }
 
 
