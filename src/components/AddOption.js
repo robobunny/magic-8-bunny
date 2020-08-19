@@ -1,40 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-export default class AddOption extends React.Component {
-    constructor(props){
-        super(props);
-        this.formSubmit = this.formSubmit.bind(this);
-        this.state = {
-            error: undefined
-        };
-    }
-    formSubmit(e){
+ const AddOption = (props) => {
+    const [error, setError]= useState(undefined);
+    
+    const formSubmit = (e) => {
         e.preventDefault();
         const option = e.target.elements.option.value.trim();
-        const error = this.props.addOption(option);
-        this.setState(()=>{
-            return { error }
-        })
-        if (!error) {
+        const err = props.addOption(option);
+        setError(err);
+        if (!err) {
             e.target.elements.option.value = '';
         }
     }
 
-    render() {
-        return (
-            <div className="form">
-                <h3>Add a response:</h3>
-                <form onSubmit={this.formSubmit}>
-                    <input 
-                        type="text"
-                        name="option"
-                        placeholder="Add a wise response..."
-                        autoFocus={true}
-                    />
-                    <button>Add Option</button>
-                </form>
-                {this.state.error && <p className="error">{this.state.error}</p>}
-            </div>
-        );
-    }
+    return (
+        <div className="form">
+            <h3>Add a response:</h3>
+            <form onSubmit={formSubmit}>
+                <input 
+                    type="text"
+                    name="option"
+                    placeholder="Add a wise response..."
+                    autoFocus={true}
+                />
+                <button>Add Option</button>
+            </form>
+            {error && <p className="error">{error}</p>}
+        </div>
+    );
 }
+
+export default AddOption;
