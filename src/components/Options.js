@@ -5,7 +5,7 @@ const Options = (props) => {
     return (
         <div>
             <div className="options-header">
-                <p>There are {props.options.length} options:</p>
+                <p>Robobunny knows {props.options.length} responses:</p>
                 <button onClick={props.removeAllOptions}>Remove All</button>
             </div>
             <div className="options-list">

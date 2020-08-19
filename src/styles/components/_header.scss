@@ -1,25 +1,28 @@
 header {
+    font-family: $heading-font;
     box-sizing: border-box;
     background-color: $dkgreen-900;
-    margin-bottom: 2rem;
-    padding: 2.8rem 2.4rem;
+    padding: 2.8rem 2.4rem 1.4rem 2.4rem;
+    margin-bottom: $font-sm;
 }
 
 h1 {
-    font-size: 3.6rem;
+    font-size: $font-lg;
     margin: 0;
 }
 
 h2 {
     color: $bunny-600;
-    font-size: $font-2xl;
+    font-size: $font-md;
     font-weight: $font-normal;
     margin: 0;
 }
 
-@media (max-width:40rem) {
+@media (min-width: 600px) {
     header {
-        padding: 2.8rem 2.4rem 1.4rem 2.4rem;
-        margin-bottom: $font-sm;
+        margin-bottom: $font-md;
     }
+
+    h1 { font-size: $font-3xl; }
+    h2 { font-size: $font-2xl; }
 }

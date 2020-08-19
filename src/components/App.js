@@ -10,7 +10,7 @@ export default class App extends React.Component {
     constructor(props){
         super(props);
         this.title = 'Magic 8 Bunny';
-        this.subtitle = 'Let robotic rabbits tell you how to live your life.' ;
+        this.subtitle = 'Let a robotic rabbit tell you how to live your life.' ;
         this.removeAllOptions = this.removeAllOptions.bind(this);
         this.addOption = this.addOption.bind(this);
         this.pickFate = this.pickFate.bind(this);
@@ -102,7 +102,8 @@ export default class App extends React.Component {
             <div>
                 <Header 
                     title={this.title}
-                    subtitle={this.subtitle} />
+                    subtitle={this.subtitle} 
+                />
                     <div className="container">
                         <AddOption 
                             addOption={this.addOption}

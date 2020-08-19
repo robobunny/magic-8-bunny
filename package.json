@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build:prod": "webpack -p --config webpack.prod.js",
-    "serve": "webpack-dev-server --watch",
+    "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -28,6 +28,7 @@
     "mini-css-extract-plugin": "^0.9.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-modal": "^2.2.2"
+    "react-modal": "^2.2.2",
+    "simplebar-react": "^2.2.1"
   }
 }
