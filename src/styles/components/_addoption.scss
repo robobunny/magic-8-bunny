@@ -1,25 +1,30 @@
+.form {
+    padding: 1rem;
+}
+
 form {
     display: flex;
-    background-color: $dkgreen0;
-    padding: $s-size $m-size;
+    padding: 0 $font-lg;
+    flex-direction: column;
 }
 
 form input {
-    flex-grow: 1;
-    margin: 0 $s-size 0 0;
-    background-color: $dkgreen2;
-    color: $green;
-    border: .5rem solid $dkgreen1;
-    font-size: $l-size;
+    background-color: $dkgreen-600;
+    color: $bunny-500;
+    border: .5rem solid $dkgreen-700;
+    font-size: $font-md;
+    margin: 0 0 $font-sm 0;
     padding: .6rem .2rem;
 }
 
-@media (max-width:600px) {
+@media (min-width: 600px) {
     form {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     form input{
-        margin: 0 0 $s-size 0;
+        flex-grow: 1;
+        font-size: $font-lg;
+        margin: 0 $font-sm 0 0;
     }
 }

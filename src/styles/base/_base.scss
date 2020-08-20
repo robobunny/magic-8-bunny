@@ -2,21 +2,17 @@
     transition: 150ms;
 }
 
-html {
-    font-size: 62.5%;
-}
-
 body {
-    background-color: $dkgreen1;
-    color: $green;
-    font-family: 'Fira Sans OT', 'Arial', sans-serif;
-    font-size: $s-size;
+    background-color: $dkgreen-800;
+    color: $bunny-500;
+    font-family: $text-font;
+    font-size: $font-md;
 }
 
 .container {
-    max-width: 740px;
-    background-color: $dkgreen0;
-    margin: 0 auto $xl-size;
+    max-width: 1024px;
+    background-color: $dkgreen-900;
+    margin: 0 auto $font-lg;
     padding: 0;
 }
 
@@ -26,9 +22,9 @@ body {
 }
 
 .error {
-    color: $error;
+    color: $red-700;
     font-style: italic;
     text-align: center;
-    background-color: $dkgreen0;
-    margin: $m-size;
+    background-color: $dkgreen-800;
+    margin: $font-md;
 }

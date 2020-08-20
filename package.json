@@ -1,9 +1,10 @@
 {
-  "name": "",
+  "name": "magic-8-bunny",
   "version": "1.0.0",
-  "description": "Let a bionic bunny tell you what to dooM",
+  "description": "Let a robotic rabbit answer all your questions",
   "main": "index.js",
   "scripts": {
+    "build:prod": "webpack -p --config webpack.prod.js",
     "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,8 +25,10 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "mini-css-extract-plugin": "^0.9.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-modal": "^2.2.2"
+    "react-modal": "^2.2.2",
+    "simplebar-react": "^2.2.1"
   }
 }

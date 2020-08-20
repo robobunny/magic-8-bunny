@@ -5,14 +5,14 @@ const Options = (props) => {
     return (
         <div>
             <div className="options-header">
-                <p>There are {props.options.length} options:</p>
+                <p>Robobunny knows {props.options.length} responses:</p>
                 <button onClick={props.removeAllOptions}>Remove All</button>
             </div>
             <div className="options-list">
                 {
                     props.options.length === 0 
                     && <p className="italics">
-                        Add a possible course of action to get started!
+                        Add a possible response to get started!
                     </p>
                 }
                 {
@@ -31,7 +31,7 @@ const Options = (props) => {
                     hidden={props.popBtnClicked} 
                     onClick={props.populateList}
                 >
-                    Unlock secret options
+                    Add default responses
             </button>
         </div>
     );

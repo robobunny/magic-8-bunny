@@ -2,14 +2,24 @@ import React from 'react';
 
 const Action = (props) => {
     return (
-        <div>
-            <button
-                className="big-button primary"
+        <div className="form">
+        <h3>Ask a question:</h3>
+            <form
+                className="action-form"
                 disabled={!props.hasOptions}
-                onClick={props.pickFate}
-            >
-                What should I do?
-            </button>
+                onSubmit={props.pickFate}>
+                <input 
+                    type="text" 
+                    name="question" 
+                    placeholder="Ask Robobunny a yes-or-no question..." 
+                />
+                <button
+                    className="primary"
+                    disabled={!props.hasOptions}
+                >
+                    Ask Robobunny!
+                </button>
+            </form>
         </div>
     );
 }
