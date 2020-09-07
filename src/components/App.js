@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Action from './Action';
+import AskQuestion from './AskQuestion';
 import AddOption from './AddOption';
 import Header from './Header';
 import HelpModal from './HelpModal';
-import Options from './Options';
+import OptionsList from './OptionsList';
 import OptionModal from './Modal';
 
  const App = () => {
@@ -84,11 +84,11 @@ import OptionModal from './Modal';
                     <AddOption 
                         addOption={addOption}
                     />
-                    <Action 
+                    <AskQuestion 
                         hasOptions={options.length > 0}
                         pickFate={pickFate}
                     />
-                    <Options 
+                    <OptionsList 
                         options={options}
                         removeAllOptions={removeAllOptions}
                         removeOneOption={removeOneOption}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Action = (props) => {
+const AskQuestion = (props) => {
     return (
         <div className="form">
         <h3>Ask a question:</h3>
@@ -24,4 +24,4 @@ const Action = (props) => {
     );
 }
 
-export default Action;
+export default AskQuestion;
