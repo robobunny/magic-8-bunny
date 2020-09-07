@@ -6,7 +6,8 @@
   "scripts": {
     "build:prod": "webpack -p --config webpack.prod.js",
     "start": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm run build:prod && sudo surge . http://magic-8-bunny.surge.sh"
   },
   "author": "",
   "license": "ISC",
