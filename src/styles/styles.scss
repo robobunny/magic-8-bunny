@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Orbitron:wght@500;700&display=swap');
-@import './base/colors';
-@import './base/typography';
+
+@import './variables/colors';
+@import './variables/typography';
+
 @import './base/base';
-@import './components/addoption';
-@import './components/buttons';
-@import './components/header';
-@import './components/modal';
-@import './components/widget';
+@import './base/buttons';
+
+@import '../components/AddResponse/addResponse';
+@import '../components/Header/header';
+@import '../components/HelpMessage/modal';
+@import '../components/DisplayResponses/displayResponses';
