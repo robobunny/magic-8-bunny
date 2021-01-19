@@ -1,60 +1,60 @@
-import React, { useState, useEffect } from "react";
-import AskQuestion from "./AskQuestion/AskQuestion";
-import AddResponse from "./AddResponse/AddResponse";
-import Header from "./Header/Header";
-import HelpMessage from "./HelpMessage/HelpMessage";
-import ListOfResponses from "./DisplayResponses/ListOfResponses";
-import DisplayAnswer from "./AskQuestion/DisplayAnswer";
+import React, { useState, useEffect } from "react"
+import AskQuestion from "./AskQuestion/AskQuestion"
+import AddResponse from "./AddResponse/AddResponse"
+import Header from "./Header/Header"
+import HelpMessage from "./HelpMessage/HelpMessage"
+import ListOfResponses from "./DisplayResponses/ListOfResponses"
+import DisplayAnswer from "./DisplayAnswer/DisplayAnswer"
 
 const App = () => {
-  const title = "Magic 8 Bunny";
-  const subtitle = "Let a robotic rabbit tell you how to live your life.";
+  const title = "Magic 8 Bunny"
+  const subtitle = "Let a robotic rabbit tell you how to live your life."
 
-  const [options, setOptions] = useState([]);
-  const [popBtnClicked, setPopBtnClicked] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(undefined);
-  const [helpModal, setHelpModal] = useState(true);
+  const [options, setOptions] = useState([])
+  const [popBtnClicked, setPopBtnClicked] = useState(false)
+  const [selectedOption, setSelectedOption] = useState(undefined)
+  const [helpModal, setHelpModal] = useState(true)
 
   useEffect(() => {
     try {
-      const json = localStorage.getItem("options");
+      const json = localStorage.getItem("options")
       if (json) {
-        const optionList = JSON.parse(json);
-        setOptions(optionList);
+        const optionList = JSON.parse(json)
+        setOptions(optionList)
       }
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
-  }, []);
+  }, [])
 
   useEffect(() => {
-    localStorage.setItem("options", JSON.stringify(options));
-  }, [options]);
+    localStorage.setItem("options", JSON.stringify(options))
+  }, [options])
 
   const removeAllOptions = () => {
-    setOptions([]);
-    setPopBtnClicked(false);
-  };
+    setOptions([])
+    setPopBtnClicked(false)
+  }
 
-  const removeOneOption = (o) => {
-    setOptions(options.filter((v, i) => i !== o));
-  };
+  const removeOneOption = o => {
+    setOptions(options.filter((v, i) => i !== o))
+  }
 
-  const addOption = (newOpt) => {
+  const addOption = newOpt => {
     if (!newOpt) {
-      return "Type in a possible wise answer!";
+      return "Type in a possible wise answer!"
     } else if (options.indexOf(newOpt) > -1) {
-      return "That answer's already in the list!";
+      return "That answer's already in the list!"
     }
-    setOptions(options.concat([newOpt]));
-  };
+    setOptions(options.concat([newOpt]))
+  }
 
-  const pickFate = (e) => {
-    e.preventDefault();
-    const num = Math.floor(Math.random() * options.length);
-    setSelectedOption(options[num]);
-    e.target.elements.question.value = "";
-  };
+  const pickFate = e => {
+    e.preventDefault()
+    const num = Math.floor(Math.random() * options.length)
+    setSelectedOption(options[num])
+    e.target.elements.question.value = ""
+  }
 
   const populateList = () => {
     setOptions(
@@ -67,14 +67,14 @@ const App = () => {
         "No way!",
         "Impossible!",
       ])
-    );
-    setPopBtnClicked(true);
-  };
+    )
+    setPopBtnClicked(true)
+  }
 
   const closeModal = () => {
-    setSelectedOption(undefined);
-    setHelpModal(false);
-  };
+    setSelectedOption(undefined)
+    setHelpModal(false)
+  }
 
   return (
     <div>
@@ -93,7 +93,7 @@ const App = () => {
       <HelpMessage helpModal={helpModal} closeModal={closeModal} />
       <DisplayAnswer selectedOption={selectedOption} closeModal={closeModal} />
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

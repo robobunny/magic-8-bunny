@@ -1,5 +1,6 @@
 import React from "react"
 import Modal from "react-modal"
+import robobunny from "../../img/bunny-fill-128.png"
 
 const HelpMessage = props => {
   return (
@@ -11,8 +12,8 @@ const HelpMessage = props => {
       className="modal">
       <img
         type="image/png"
-        src="%PUBLIC_URL%/bunny-fill-128-sq.png"
-        alt="A cute green robotic-looking bunny character"
+        src={robobunny}
+        alt="A cute green robobunny character with square glasses"
       />
       <h3>Magic 8 Bunny</h3>
       <div className="help-text">
