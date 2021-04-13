@@ -75,7 +75,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div id="app">
       <Header title={title} subtitle={subtitle} />
       <div className="container">
         <AddResponse addOption={addOption} />
@@ -88,7 +88,7 @@ const App = () => {
           popBtnClicked={popBtnClicked}
         />
       </div>
-      <HelpMessage helpModal={helpModal} closeModal={closeModal} />
+      {/* <HelpMessage helpModal={helpModal} closeModal={closeModal} /> */}
       <DisplayAnswer selectedOption={selectedOption} closeModal={closeModal} />
     </div>
   )
