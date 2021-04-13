@@ -25,7 +25,7 @@ describe("AddResponse component", () => {
   })
 
   test("should add the option when enter is pressed", () => {
-    const { getByLabelText, getByText } = render(<AddResponse addOption={mockAddOption} />)
+    const { getByLabelText } = render(<AddResponse addOption={mockAddOption} />)
     const inputField = getByLabelText("Add a response:")
     userEvent.type(inputField, "Test Option 1{enter}")
     expect(mockAddOption).toHaveBeenCalledWith("Test Option 1")

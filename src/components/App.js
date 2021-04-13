@@ -75,7 +75,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div id="app">
       <Header title={title} subtitle={subtitle} />
       <div className="container">
         <AddResponse addOption={addOption} />

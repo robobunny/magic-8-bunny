@@ -15,7 +15,7 @@ const DisplayAnswer = props => {
         src={robobunny}
         alt="A cute green robobunny character with square glasses"
       />
-      <h3>_robobunny has spoken:</h3>
+      <h3>Robobunny has spoken:</h3>
       <p>{props.selectedOption}!</p>
       <button onClick={props.closeModal}>I accept your wisdom!</button>
     </Modal>
