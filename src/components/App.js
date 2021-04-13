@@ -88,7 +88,7 @@ const App = () => {
           popBtnClicked={popBtnClicked}
         />
       </div>
-      {/* <HelpMessage helpModal={helpModal} closeModal={closeModal} /> */}
+      <HelpMessage helpModal={helpModal} closeModal={closeModal} />
       <DisplayAnswer selectedOption={selectedOption} closeModal={closeModal} />
     </div>
   )
