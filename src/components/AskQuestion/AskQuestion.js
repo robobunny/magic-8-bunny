@@ -1,25 +1,32 @@
-import React from "react";
+import React from "react"
 
-const AskQuestion = (props) => {
+const AskQuestion = props => {
+  const pickAnAnswer = e => {
+    e.preventDefault()
+    if (props.hasOptions) {
+      props.pickFate()
+      e.target.elements.question.value = ""
+    }
+  }
+
   return (
     <div className="form">
-      <h3>Ask a question:</h3>
-      <form
-        className="action-form"
-        disabled={!props.hasOptions}
-        onSubmit={props.pickFate}
-      >
-        <input
-          type="text"
-          name="question"
-          placeholder="Ask Robobunny a yes-or-no question..."
-        />
-        <button className="primary" disabled={!props.hasOptions}>
-          Ask Robobunny!
-        </button>
+      <form className="action-form" disabled={!props.hasOptions} onSubmit={pickAnAnswer}>
+        <label>
+          Ask a question:
+          <input
+            type="text"
+            name="question"
+            id="question-input"
+            placeholder="Ask Robobunny a yes-or-no question..."
+          />
+          <button className="primary" disabled={!props.hasOptions}>
+            Ask Robobunny!
+          </button>
+        </label>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default AskQuestion;
+export default AskQuestion
