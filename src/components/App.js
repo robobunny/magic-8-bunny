@@ -49,11 +49,9 @@ const App = () => {
     setOptions(options.concat([newOpt]))
   }
 
-  const pickFate = e => {
-    e.preventDefault()
+  const pickFate = () => {
     const num = Math.floor(Math.random() * options.length)
     setSelectedOption(options[num])
-    e.target.elements.question.value = ""
   }
 
   const populateList = () => {
